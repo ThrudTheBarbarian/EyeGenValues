@@ -36,5 +36,6 @@ class MainWindow : public QMainWindow
 		void _increaseGeneration(void);			// Increase the generation
 		void _playGenerations(void);			// Play generations as anim
 		void _playFrame(void);					// Draw one frame
+		void _quit(void);						// Terminate the app
 	};
 #endif // MAINWINDOW_H

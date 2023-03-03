@@ -62,6 +62,11 @@ MainWindow::MainWindow(QWidget *parent)
 	connect(ui->btnF8, &QPushButton::clicked,
 			this, &MainWindow::_playGenerations);
 
+	/*************************************************************************\
+	|* Bind 'quit'
+	\*************************************************************************/
+	connect(ui->btnF10, &QPushButton::clicked,
+			this, &MainWindow::_quit);
 	}
 
 void MainWindow::showEvent(QShowEvent* event)
@@ -177,3 +182,11 @@ void MainWindow::_playFrame(void)
 		_cron->stop();
 	}
 
+
+/*****************************************************************************\
+|* Increase the generation
+\*****************************************************************************/
+void MainWindow::_quit(void)
+	{
+	QApplication::quit();
+	}
